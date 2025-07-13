@@ -1,0 +1,249 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><link rel="stylesheet" href="style.css" /><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecureVPN - Safe, Fast & Private</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f1113;
+      color: white;
+    }
+    header {
+      background-color: #1f2937;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #00ffd1;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background-color: #111827;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .btn {
+      background-color: #00ffd1;
+      color: #000;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .feature {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+    }
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SecureVPN</h1>
+    <p>Stay private. Stay secure. Anywhere.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Protect Your Internet with One Click</h2>
+    <p>Browse securely with blazing fast VPN servers in 100+ countries.</p>
+    <button class="btn">Get Started</button>
+
+    <div class="features">
+      <div class="feature">
+        <h3>Fast Speeds</h3>
+        <p>Unlimited bandwidth and zero throttling.</p>
+      </div>
+      <div class="feature">
+        <h3>No Logs</h3>
+        <p>We never track or store your data.</p>
+      </div>
+      <div class="feature">
+        <h3>Easy Setup</h3>
+        <p>Connect in one tap on any device.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SecureVPN. All rights reserved.
+  </footer>
+
+</body>
+</html><style>/* VPN UI CSS Design */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f1113;
+  color: #ffffff;
+}
+
+header {
+  background-color: #1f2937;
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #00ffd1;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #b0bec5;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #111827;
+  padding: 10px;
+  gap: 20px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffd1;
+}
+
+section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 16px;
+  color: #cfd8dc;
+}
+
+.btn {
+  background-color: #00ffd1;
+  color: #000000;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00e6bb;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature {
+  background-color: #1f1f1f;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}</style><script>package com.example.vpnapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import de.blinkt.openvpn.LaunchVPN;
+import de.blinkt.openvpn.VpnProfile;
+import de.blinkt.openvpn.core.ProfileManager;
+
+public class MainActivity extends AppCompatActivity {
+
+    Button connectBtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        connectBtn = findViewById(R.id.connectBtn);
+
+        connectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                connectToVPN();
+            }
+        });
+    }
+
+    private void connectToVPN() {
+        // သင့် configuration file (.ovpn) ကို load လုပ်ဖို့လိုတယ်။
+        VpnProfile profile = ProfileManager.getInstance(this).getProfileByName("myvpn");
+        if (profile != null) {
+            Intent intent = new Intent(this, LaunchVPN.class);
+            intent.putExtra(LaunchVPN.EXTRA_KEY, profile.getUUID().toString());
+            intent.setAction(Intent.ACTION_MAIN);
+            startActivity(intent);
+        }
+    }
+}</script>
